@@ -1,0 +1,18 @@
+{{template "base" .}} {{define "title"}}Создать заметку.{{end}} {{define "main"}}
+<form action="/snippet/create" method="POST">
+    <input type="text" name="title" placeholder="Title">
+    <textarea name="snippet" id="" cols="30" rows="10" placeholder="Content"></textarea>
+    <div>
+        Delete in:
+        <input type="radio" id="contactChoice1" name="time" value="365">
+        <label for="contactChoice1">One Year</label>
+
+        <input type="radio" id="contactChoice2" name="time" value="7">
+        <label for="contactChoice2">One Week</label>
+
+        <input type="radio" id="contactChoice3" name="time" value="1">
+        <label for="contactChoice3">One Day</label>
+    </div>
+    <input type="submit" value="Отправить" />
+</form>
+{{end}}
